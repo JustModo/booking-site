@@ -5,7 +5,7 @@ export default function Drawer() {
     <div className="drawer drawer-end z-50">
       <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
-        <label className="drawer-button btn btn-primary" htmlFor="my-drawer-4">
+        <label className="drawer-button btn btn-accent" htmlFor="my-drawer-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
