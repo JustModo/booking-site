@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import daisyui from "daisyui";
 
 const config: Config = {
   content: [
@@ -6,15 +7,69 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        light: {
+          "primary": "#111827",
+          "secondary": "#9ca3af",
+          "accent": "#dc2626",
+          "neutral": "#e5e7eb",
+          "base-100": "#f3f4f6",
+          "info": "#67e8f9",
+          "success": "#6ee7b7",
+          "warning": "#fde047",
+          "error": "#be123c",
+        },
+        dark: {
+          "primary": "#f3f4f6",
+          "secondary": "#9ca3af",
+          "accent": "#dc2626",
+          "neutral": "#292524",
+          "base-100": "#1c1917",
+          "info": "#67e8f9",
+          "success": "#6ee7b7",
+          "warning": "#fde047",
+          "error": "#be123c",
+        },
       },
     },
   },
-  plugins: [],
+  variants: {
+    extend: {
+      // Your variant definitions here
+    },
+  },
+  daisyui: {
+    themes: [
+      {
+        light: {
+          "primary": "#111827",
+          "secondary": "#9ca3af",                  
+          "accent": "#dc2626",
+          "neutral": "#e5e7eb",
+          "base-100": "#f3f4f6",
+          "info": "#67e8f9",
+          "success": "#6ee7b7",
+          "warning": "#fde047",
+          "error": "#be123c",
+        },
+        dark: {
+          "primary": "#f3f4f6",
+          "secondary": "#9ca3af",
+          "accent": "#dc2626",
+          "neutral": "#292524",
+          "base-100": "#1c1917",
+          "info": "#67e8f9",
+          "success": "#6ee7b7",
+          "warning": "#fde047",
+          "error": "#be123c",
+        },
+      },
+    ],
+  },
+
+  plugins: [daisyui],
 };
 export default config;
