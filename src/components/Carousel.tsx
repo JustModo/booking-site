@@ -5,15 +5,29 @@ import React, { useRef } from "react";
 export default function Carousel() {
   const scrollRef = useRef(null);
 
-  const handleScroll = (direction: string) => {
+  const handleScroll = (direction) => {
     if (scrollRef.current) {
       const itemWidth = scrollRef.current.children[0].offsetWidth;
+
+      const carouselItems =
+        scrollRef.current.querySelectorAll(".carousel-item");
+      carouselItems.forEach((item) => {
+        item.classList.remove("hover:scale-105");
+      });
+
       const { scrollLeft } = scrollRef.current;
       const scrollTo =
         direction === "left"
           ? scrollLeft - itemWidth * 3
           : scrollLeft + itemWidth * 3;
+
       scrollRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
+
+      setTimeout(() => {
+        carouselItems.forEach((item) => {
+          item.classList.add("hover:scale-105");
+        });
+      }, 500);
     }
   };
 
