@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 100ms; 
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
