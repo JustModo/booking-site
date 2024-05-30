@@ -29,7 +29,7 @@ export default function LoginModal() {
             clipRule="evenodd"
           />
         </svg>
-        <input type="password" className="grow" value="password" />
+        <input type="password" className="grow" placeholder="Password" />
       </label>
       <button className="btn btn-accent my-2">Login</button>
     </div>
